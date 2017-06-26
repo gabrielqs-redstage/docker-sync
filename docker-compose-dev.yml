@@ -1,0 +1,11 @@
+version: "2"
+services:
+  nginx:
+    volumes:
+      - <project_name>-sync:/var/www/html:nocopy
+  phpfpm:
+    volumes:
+      - <project_name>-sync:/var/www/html:nocopy
+volumes:
+  <project_name>-sync:
+    external: true
